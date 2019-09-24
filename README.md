@@ -2,6 +2,11 @@
 
 This repository describes a set of useful [patterns](#pattern) for building software [applications](#application). It contains descriptions in natural language along with some examples in actual or pseudo code. 
 
+## Index
+- Overview (this document)
+- Security
+  - [Role Based Security](./security/role-based-security.md)
+
 ## License
 The content in this repository is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode). As summarized in the [Commons Deed](https://creativecommons.org/licenses/by-sa/4.0/) and strictly defined in the [license](./LICENSE.md) itself: you may share or adapt this work, provided you give appropriate credit, provide a link to the license, and indicate if changes were made. In addition, you must preserve the original license. For the details and actual legal license, consult the [license](./LICENSE.md).
 
