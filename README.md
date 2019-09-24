@@ -71,3 +71,7 @@ As far as we can achieve modularity in practice, it also allows us to describe a
 
 #### Building Is Not Inventing
 Understanding and implementing patterns is not reinventing. It is the opposite. Builders build walls, they don't operate wall-building machines, nor are they "reinventing walls" every time they build one. They are using their human brains to perpetually adapt the patterns of building walls to each individual project. Electricians run wires, they don't operate electrical-installation machines. They are not "reinventing electricity" even when they design the circuits and transformers of a building. They are using their human brains to perpetually adapt the patterns of planning and installing wires, outlets, and associated hardware to each individual project.
+
+##### Attribution
+
+Author: Joshua Honig. Copyright 2019 Mallowfields LLC.
