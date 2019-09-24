@@ -4,11 +4,10 @@
   - [What it is](#what-it-is)
   - [What it is not](#what-it-is-not)
 - [Observations](#observations)
-- [Principles](#principles)
-- [Process](#process)
-  - [Ontology](#ontology)
-  - [Storage Design](#storage-design)
-  - [Runtime Modelling](#runtime-modelling)
+- [Principles](#principles) 
+  - [Ontology](#ontology-first)
+  - [Storage Design](#independent-storage-design)
+  - [Runtime Modelling](#independent-runtime-modelling)
 
 ## Scope
 
@@ -121,9 +120,9 @@ Examples where this may be justified depending on the scale, costs, and performa
  - Replicating and denormalizing some data into a search database (e.g. elasticsearch, solr)
  - Storing raw JSON inputs to an API in a document database, with a limited subset imported to a main relational database
      
-### Independent runtime design
+### Independent runtime modelling
 
-**Runtime model design** involves deciding how to encode the [ontology](#ontology) in a specific programming language. It requires understanding the semantics and mechanics of a specific language, and using those to represent the ontology faithfully, flexibly, and in a way that works well with the known patterns of the how the data will actually be used. This can only be known by a human.
+**Runtime model design** involves deciding how to encode the [ontology](#ontology-first) in a specific programming language. It requires understanding the semantics and mechanics of a specific language, and using those to represent the ontology faithfully, flexibly, and in a way that works well with the known patterns of the how the data will actually be used. This can only be known by a human.
 
 Decisions include when or how to *build and represent collections*, *communicate which storage actions are valid*, *lazy load* (or not), *mutate* (or not), *support batch operations* (or not), and *allow free-form searching* (or not).  
 
