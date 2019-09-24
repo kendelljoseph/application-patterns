@@ -5,7 +5,7 @@ This repository describes a set of useful [patterns](#pattern) for building soft
 ## Index
 - Overview (this document)
 - Concepts
-  - [Applications Software](./applications-software.md)
+  - [Applications Software](./concepts/applications-software.md)
 - Security
   - [Role Based Security](./security/role-based-security.md)
 
