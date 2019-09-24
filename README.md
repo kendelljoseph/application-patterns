@@ -4,6 +4,8 @@ This repository describes a set of useful [patterns](#pattern) for building soft
 
 ## Index
 - Overview (this document)
+- Concepts
+  - [Applications Software](./applications-software.md)
 - Security
   - [Role Based Security](./security/role-based-security.md)
 
@@ -19,6 +21,8 @@ This work is aimed at **professional software application engineers**: people wh
 # Terminology
 
 ## Application
+*For a longer treatment of this topic, see [Applications Software](./concepts/applications-software.md)*
+
 My general qualification for distinguishing software *applications* from other kinds of software is that applications software is generally aimed at helping **humans** do **work**. Often humans are represented directly in the form of `User` objects, or the software enables humans to interactively manipulate data. In other cases, humans may not be directly represented or even interacting with the software, but the software is still aimed at accomplishing a practical goal for humans: moving money, dispatching vehicles.
 
 Like physical machines, applications are expected to **produce value** when they operate. Motors are incredibly useful, but pointless by themselves. They must be attached to some other thing -- even if just a simple drill bit -- to become a useful machine. Likewise building software applications generally involves selecting, assembling, and applying various mechanical software components (data stores, executing environments, shared caches, HTTP interfaces) to accomplish some practical goal.
