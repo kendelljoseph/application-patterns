@@ -1,3 +1,5 @@
+[Home](./../README.md) / Concepts / Applications Software
+
 # Applications Software
  
 - [Scope](#scope)
@@ -35,15 +37,15 @@ This type of software has the following characteristics:
 This kind of software is fundamentally different from some other familiar kinds of software. It is particularly **not** the following:
 
  - **Systems software**
-   - Exists to standardize and optimize digital mechanical concerns. Whether that is a POSIX-compliant operating system, and HTTP server, or a ECMAScript interpreter, its role is to model mechanical processes (memory allocation and file IO, a request protocol, a language spec, etc.), not changing and unique human activities. 
+   - Exists to standardize and optimize digital mechanical concerns. Whether that is a POSIX-compliant operating system, an HTTP server, or an ECMAScript interpreter, its purpose is to model mechanical processes (memory allocation and file IO, a request protocol, a language spec, etc.), not changing and unique human activities. 
    - Often has no data content at all, or is limited to low-level mechanical content that reflects machine rather than human activity concepts (file system, cookie cache, serialized AST, etc.) 
-   - Value is in permanence and standardization of the procedural action and API, sometimes on global scale over decades of time.  
+   - Value is in permanence and standardization of the procedural action and API, sometimes on a global scale over decades of time.  
  - **Games**
-   - Like business applications, games often do have significant amounts of data and even may model human activities. Unlike business applications, the role of the game designer is to describe and impose an environment for a prospective audience, not model a process for an existing group of humans performing some practical activity. 
-   - The primary concern of a game is to deliver an *experience* that a user will pay for, whether with money or time and attention.
+   - Like business applications, games often do have significant amounts of data and even may model human activities. Unlike business applications, the role of the game designer is to describe and even impose an environment for a prospective audience, not model a process for an existing group of humans performing some practical activity. 
+   - The primary concern of a game is to deliver an *experience* that a user will pay for, whether with money or with time and attention.
    - Users can choose to use the software are not.
  - **Digital Media**
-   - Interactive media -- including media that allows purchase such as an online store -- are more similar to games in that they ultimately deliver an *experience*, whether that is an experience of consuming and commenting on interesting information, being entertained, or exploring and discovering things to buy. Such web sites and web apps may integrate with an business applications back end for processes such as billing and fulfillment.
+   - Interactive media -- including media that allows purchase such as an online store -- are more similar to games in that they ultimately deliver an *experience*, whether that is an experience of consuming and commenting on interesting information, being entertained, or exploring and discovering things to buy. Such web sites and web apps may integrate with a business applications back end for processes such as billing and fulfillment.
    - Once again, users can choose to use the software or not.
 
 ## Observations
@@ -59,10 +61,12 @@ Over combined decades of building, using, supporting and retiring data-focused e
    - *The software layer cannot be responsible for guaranteeing data **validity**, because it **will** fail.*
  - **Applications change**, and more frequently than data stores. New technologies emerge, old skills are lost, trends come and go, and business goals change. 
    - *The application software should be able to change significantly without changing the data store*
- - **Applications encode business logic in source code**. In practice, the existence and composition of source code becomes *the* source of truth for how a business process actually happens. This is not desirable; it is reality. 
-   - *Business logic must be clear and distinct from implementation mechanics*
  - **Frameworks change** in API, norms, and architecture even more often than business applications. 
    - *Wedding important semantics OR mechanics to a framework guarantees that, given enough time, **no one** will understand the code.*
+
+### Applications come to define business processes
+ - **Applications encode business logic in source code**. In practice, the existence and composition of source code becomes *the* source of truth for how a business process actually happens. This is not desirable; it is reality. 
+   - *Business logic must be clear and distinct from implementation mechanics*
  
 ### Human thought and skill cannot be automated
 
@@ -77,7 +81,7 @@ Over combined decades of building, using, supporting and retiring data-focused e
 
  - The following concerns represents distinct *and differing* requirements, and thus require different thoughts and skills to design and implement:
    - **Data storage**: selection, design and implementation of data stores
-   - **Data representation at run time**  including choice of language and applicable idioms for representing records 
+   - **Data representation at run time**  including the choice of language and applicable idioms for representing records 
    - **Procedural logic** for creating and modifying data, whether through basic CRUD actions or more complex business logic
    - **Data serialization** for arms-length APIs
 
@@ -91,7 +95,7 @@ The **ontology** is the first and most real aspect of the system.
 
 The ontology is the shape of the information itself -- which in most business systems in the *actual value* of the system. The work of ontology involves identifying what concepts need to be recorded, how they relate to each other, and what static rules can be asserted about data *validity*.  
 
-Ontology is not a database schema. The concept of an invoice and its line items exists the same whether they are stored in a flat file, a relational database, a document store, or a clay tablet. 
+An ontology is not a database schema. The concept of an invoice and its line items exists the same whether they are stored in a flat file, a relational database, a document store, or a clay tablet. 
 
 ### Independent Storage Design
 
@@ -99,17 +103,17 @@ Ontology is not a database schema. The concept of an invoice and its line items 
 
 Decisions include where and how to *normalize* (or not), *index* (or not), *constrain* (or not), *compress* (or not), *partition* (or not), etc. 
 
-The **data itself** should be valid, accessible, and understandable **without the application layer**.  As noted above, *applications change and have bugs*. It must be possible at least for specialists and support personnel to interact directly with the data store itself, and in a way that the data can be understood.
+The **data itself** should be valid, accessible, and understandable **without the application layer**.  As noted above, *applications change and have bugs*. It must be possible for specialists and support personnel to interact directly with the data store itself, and in a way that the data can be understood.
 
 #### Practical implications
 
 Most importantly:
 
-> Storage design represents human thought and skill. It cannot be automated. 
+> Storage design requires human thought and skill. It cannot be automated. 
 
-Storage design -- often the the practical task of writing SQL DDL statements for a specific brand of relational database -- is one of the framing tasks of data applications engineering. In other words, *don't try to make a storage definition-generating machine*. It will be far more complex than using a human who knows what they are doing, and will never match the quality of human work. 
+Storage design and implementation -- often realized in the practical task of writing SQL DDL statements for a specific brand of relational database -- is one of the framing tasks of data applications engineering. In other words, *don't try to make a storage definition-generating machine*. It will be far more complex than using a human who knows what they are doing, and will never match the quality of human work. 
 
-At the most, limit generated DDL to the simplest and most obvious cases (like a prefab truss or wall section), while allowing human work to seamlessly blend with the generated DDL.
+At the most, limit generated DDL to the simplest and most obvious cases, while allowing human work to seamlessly blend with the generated DDL.
 
 **Relational databases are almost always the right choice** for most application data, both because they offer mathematically-proven validity and consistency if implemented correctly, and because they provide well-understood and powerful access to the data through SQL.
 
@@ -128,11 +132,11 @@ Decisions include when or how to *build and represent collections*, *communicate
 
 #### Practical implications 
 
-> Runtime model design represents human thought and skill. It cannot be automated. 
+> Runtime model design requires human thought and skill. It cannot be automated. 
 
 Runtime model design is another of the framing tasks of data applications engineering. In other words, *don't try to make a runtime model-generating machine*. It will be far more complex than using a human who knows what they are doing, and will never match the quality of human work. 
 
-At the most, limit generated models to the simplest and most obvious cases (like a prefab truss or wall section), while allowing human work to seamlessly blend with the generated code. 
+At most, limit generated models to the simplest and most obvious cases, while allowing human work to seamlessly blend with the generated code. 
 
 > Runtime models do not know about storage implementation
 
