@@ -28,9 +28,9 @@ This type of software has the following characteristics:
  - The information describes **human activities**
     - Even when the content concerns digital or mechanical things or processes, the context is humans working with those machines and materials.
     - The information exists, the human activities which produce or modify the information are as the are. The software and its human designers and maintainers have limited ability to oppose or proscribe concepts due to conceptual difficulty or mechanical inconvenience. Instead, their role is to effectively model and facilitate the information and processes as they actually are.
-    - Human activities constantly change, and so must the data stores and software which encode them. The software layer in particular must be built in a way that it can change substantially over time. It must *enable* the human activities both to function in their current form and to change over time, not be a *constraint* preventing change.
+    - Human activities constantly change, and so must the data stores and software which encode and process them. The software layer in particular must be built in a way that it can change substantially over time. It must *enable* the human activities both to function in their current form and to change over time, not be a *constraint* preventing change.
     
- - The users are a relatively small group who *must* use the software to execute a practical task  
+ - The users are a relatively small group who *must* use the software to execute a practical task
 
 ### What it is not
 
@@ -38,7 +38,7 @@ This kind of software is fundamentally different from some other familiar kinds 
 
  - **Systems software**
    - Exists to standardize and optimize digital mechanical concerns. Whether that is a POSIX-compliant operating system, an HTTP server, or an ECMAScript interpreter, its purpose is to model mechanical processes (memory allocation and file IO, a request protocol, a language spec, etc.), not changing and unique human activities. 
-   - Often has no data content at all, or is limited to low-level mechanical content that reflects machine rather than human activity concepts (file system, cookie cache, serialized AST, etc.) 
+   - Often has no data content at all, or is limited to low-level mechanical content that reflects machine rather than human activity concepts (file system, cookie cache, serialized AST, etc.)
    - Value is in permanence and standardization of the procedural action and API, sometimes on a global scale over decades of time.  
  - **Games**
    - Like business applications, games often do have significant amounts of data and even may model human activities. Unlike business applications, the role of the game designer is to describe and even impose an environment for a prospective audience, not model a process for an existing group of humans performing some practical activity. 
